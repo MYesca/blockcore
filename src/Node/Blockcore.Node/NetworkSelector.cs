@@ -79,6 +79,10 @@ namespace Blockcore.Node
                 case "RSC":
                     nodeSettings = new NodeSettings(networksSelector: Blockcore.Networks.RoyalSportsCity.Networks.Networks.RoyalSportsCity, args: args);
                     break;
+
+                case "PTC":
+                    nodeSettings = new NodeSettings(networksSelector: Blockcore.Networks.Pitoco.Networks.Networks.Pitoco, args: args);
+                    break;
             }
 
             return nodeSettings;

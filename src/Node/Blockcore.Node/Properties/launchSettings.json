@@ -2,7 +2,8 @@
   "profiles": {
     "BCP (MAIN)": {
       "commandName": "Project",
-      "commandLineArgs": "--chain=BCP -server -iprangefiltering=0 -maxtipage=2147483647 -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -datadir=rocksdbdata"
+      "commandLineArgs": "--chain=BCP -server -iprangefiltering=0 -maxtipage=2147483647 -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -datadir=rocksdbdata",
+      "nativeDebugging": true
     },
     "BCP (MAIN/LOCAL)": {
       "commandName": "Project",
@@ -211,6 +212,11 @@
     "RSC (TEST/LOCAL)": {
       "commandName": "Project",
       "commandLineArgs": "--chain=RSC -server -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -datadir=nodedata -testnet"
+    },
+    "PTC (MAIN)": {
+      "commandName": "Project",
+      "commandLineArgs": "--chain=PTC -server",
+      "nativeDebugging": true
     }
   }
 }
