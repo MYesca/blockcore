@@ -194,7 +194,6 @@ namespace Blockcore.Configuration
 
             // Ensure the network being used is registered and we have the correct Network object reference.
             this.Network = NetworkRegistration.Register(this.Network);
-            this.DbType = this.ConfigReader.GetOrDefault<string>("dbtype", null, this.Logger);
 
             // Set the full data directory path.
             if (this.DataDir == null)
@@ -230,6 +229,8 @@ namespace Blockcore.Configuration
                 if (File.Exists(this.ConfigurationFile))
                     this.ReadConfigurationFile();
             }
+
+            this.DbType = this.ConfigReader.GetOrDefault<string>("dbtype", null, this.Logger);
 
             // Create the custom logger factory.
             this.LoggerFactory.AddFilters(this.Log, this.DataFolder);
