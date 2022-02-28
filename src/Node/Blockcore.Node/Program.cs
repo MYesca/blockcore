@@ -15,14 +15,14 @@ namespace Blockcore.Node
             try
             {
                 string chain = args
-                   .DefaultIfEmpty("--chain=PTC")
+                   .DefaultIfEmpty("--chain=BTC")
                    .Where(arg => arg.StartsWith("--chain", ignoreCase: true, CultureInfo.InvariantCulture))
                    .Select(arg => arg.Replace("--chain=", string.Empty, ignoreCase: true, CultureInfo.InvariantCulture))
                    .FirstOrDefault();
 
                 if (string.IsNullOrWhiteSpace(chain))
                 {
-                    chain = "PTC";
+                    chain = "BTC";
                 }
 
                 NodeSettings nodeSettings = NetworkSelector.Create(chain, args);

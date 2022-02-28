@@ -215,8 +215,8 @@
     },
     "PTC (MAIN)": {
       "commandName": "Project",
-      "commandLineArgs": "--chain=PTC -server",
-      "nativeDebugging": true
+      "commandLineArgs": "--chain=PTC -dbtype=leveldb -addnode=52.247.67.179",
+      "nativeDebugging": false
     }
   }
 }
